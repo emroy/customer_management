@@ -37,7 +37,6 @@ class Setup extends Command
      */
     public function handle()
     {
-        shell_exec("php artisan migrate");
         shell_exec("php artisan load:file");
     }
 }

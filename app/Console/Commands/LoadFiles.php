@@ -44,7 +44,7 @@ class LoadFiles extends Command
             DB::beginTransaction();
 
             //read csv file
-            $data = Storage::disk('storage')->get('customers.csv');
+            $data = Storage::disk('local')->get('customers.csv');
             $data_parsed = explode("\n",$data);
 
             $emails = [];
