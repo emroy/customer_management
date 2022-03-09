@@ -9,5 +9,5 @@
 
 ## Commands
 
-php artisan migrate
+php artisan migrate <br>
 php artisan file:load
