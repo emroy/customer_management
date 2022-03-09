@@ -15,10 +15,11 @@ class CustomerTable extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email', 40);
+            $table->string('email', 40)->unique();
             $table->text('first_name', 15);
             $table->text('last_name', 15);
-            $table->string('post_code', 10);
+            $table->bool('estatus', 15)->default(true);
+            $table->string('postcode', 10);
         });
     }
 
