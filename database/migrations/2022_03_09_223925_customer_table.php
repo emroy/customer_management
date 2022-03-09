@@ -18,7 +18,7 @@ class CustomerTable extends Migration
             $table->string('email', 40)->unique();
             $table->text('first_name', 15);
             $table->text('last_name', 15);
-            $table->bool('estatus', 15)->default(true);
+            $table->boolean('estatus', 15)->default(true);
             $table->string('postcode', 10);
         });
     }
