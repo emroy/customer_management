@@ -16,6 +16,10 @@ Route::middleware([Allow::class])->group(function(){
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('new_customer');
 
+    Route::get('/load', [App\Http\Controllers\HomeController::class, 'loadFiles'])->name('load_files');
+    
+    Route::post('/load/save', [App\Http\Controllers\HomeController::class, 'saveFiles'])->name('save_files');
+
     Route::post('/customer/new', [App\Http\Controllers\CustomerController::class, 'newCustomer'])->name('new_customer');
     
     Route::post('/customer/single', [App\Http\Controllers\CustomerController::class, 'singleCustomer'])->name('single_customer');
