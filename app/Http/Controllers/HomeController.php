@@ -129,7 +129,6 @@ class HomeController extends Controller
             
             Log::debug($e->getMessage());
             DB::rollback();
-            dd($e);
             return response(["error" => $e->getMessage()], 400);
         }
     }
